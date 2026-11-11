@@ -5,12 +5,15 @@ const config = require('./config/config');
 
 const PORT = config.port;
 
-sequelize.authenticate()
+const server = app.listen(PORT, () => {
+  console.log(`KESCA backend running on http://localhost:${PORT}`);
+});
+
+sequelize
+  .authenticate()
   .then(() => {
-    console.log('Database connected.');
-    app.listen(PORT, () => console.log(`KESCA backend running on http://localhost:${PORT}`));
+    console.log('Database connected successfully.');
   })
   .catch((err) => {
-    console.error('Database connection failed:', err.message);
-    process.exit(1);
+    console.warn('Database connection warning (check MariaDB/MySQL service):', err.message);
   });

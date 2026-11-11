@@ -5,31 +5,30 @@ import {
   GlobalOutlined,
   SafetyCertificateOutlined,
 } from '@ant-design/icons';
+import kescaLogo from '../../styles/images/02 kesca 2020.jpg';
 
 const { Title, Text, Paragraph } = Typography;
 
-const navItems = [
-  { to: '/', label: 'Home' },
-  { to: '/about', label: 'About' },
-  { to: '/standards', label: 'Standards' },
-  { to: '/find-a-pro', label: 'Find a Pro' },
-  { to: '/certification', label: 'Certification' },
-  { to: '/education', label: 'Education' },
-  { to: '/events', label: 'Events' },
-  { to: '/gallery', label: 'Gallery' },
-  { to: '/contact', label: 'Contact' },
-];
-
 const partnerLinks = [
   {
-    label: 'KESCA Certified',
-    href: '/certification',
+    label: 'KESCA Certified Verification',
+    href: '/verify',
     icon: <SafetyCertificateOutlined />,
     internal: true,
   },
   {
     label: 'Air Advocates',
     href: 'https://www.airadvocates.net',
+    icon: <GlobalOutlined />,
+  },
+  {
+    label: 'Friendly Green Giant',
+    href: 'https://www.friendlygreengiant.ca',
+    icon: <GlobalOutlined />,
+  },
+  {
+    label: 'Slumlord Patrol',
+    href: 'https://www.slumlordpatrol.com',
     icon: <GlobalOutlined />,
   },
   {
@@ -52,9 +51,12 @@ const footerStyle = {
 
 const linkStyle = {
   color: '#aab8c2',
-  display: 'block',
-  marginBottom: 8,
+  display: 'inline-flex',
+  alignItems: 'center',
+  marginBottom: 10,
   textDecoration: 'none',
+  fontSize: 14,
+  transition: 'color 0.2s',
 };
 
 const bottomBarStyle = {
@@ -68,22 +70,34 @@ export default function Footer() {
   return (
     <footer style={footerStyle}>
       <div style={{ maxWidth: 1200, margin: '0 auto' }}>
-        <Row gutter={[32, 32]}>
+        <Row gutter={[48, 32]} align="top">
           {/* Brand column */}
-          <Col xs={24} sm={24} md={8}>
-            <Title level={4} style={{ color: '#fff', marginBottom: 8 }}>
-              KESCA
-            </Title>
-            <Paragraph style={{ color: '#aab8c2', fontSize: 15 }}>
-              Setting the standard for kitchen exhaust cleaning in Canada
+          <Col xs={24} md={14}>
+            <div style={{ display: 'flex', alignItems: 'center', gap: 14, marginBottom: 16 }}>
+              <img
+                src={kescaLogo}
+                alt="KESCA Logo"
+                style={{ width: 44, height: 44, objectFit: 'contain', borderRadius: 4 }}
+              />
+              <div>
+                <Title level={4} style={{ color: '#fff', margin: 0, letterSpacing: 1 }}>
+                  KESCA
+                </Title>
+                <Text style={{ color: '#E67E22', fontSize: 13, fontWeight: 500 }}>
+                  Kitchen Exhaust Systems Cleaners Association
+                </Text>
+              </div>
+            </div>
+            <Paragraph style={{ color: '#aab8c2', fontSize: 15, maxWidth: 520, lineHeight: 1.7 }}>
+              Setting the standard for kitchen exhaust cleaning, preventative maintenance codes, and fire safety in Canada.
             </Paragraph>
-            <Paragraph style={{ color: '#aab8c2', fontSize: 13 }}>
+            <Paragraph style={{ color: '#aab8c2', fontSize: 14 }}>
               A volunteer initiative by{' '}
               <a
                 href="https://www.airadvocates.net"
                 target="_blank"
                 rel="noopener noreferrer"
-                style={{ color: '#E67E22' }}
+                style={{ color: '#E67E22', fontWeight: 600 }}
               >
                 Air Advocates
               </a>
@@ -94,46 +108,36 @@ export default function Footer() {
             </Paragraph>
           </Col>
 
-          {/* Quick links */}
-          <Col xs={24} sm={12} md={8}>
-            <Title level={5} style={{ color: '#fff', marginBottom: 16 }}>
-              Quick Links
-            </Title>
-            {navItems.map((item) => (
-              <Link key={item.to} to={item.to} style={linkStyle}>
-                {item.label}
-              </Link>
-            ))}
-          </Col>
-
           {/* Partner links */}
-          <Col xs={24} sm={12} md={8}>
-            <Title level={5} style={{ color: '#fff', marginBottom: 16 }}>
-              Partners &amp; Resources
+          <Col xs={24} md={10}>
+            <Title level={5} style={{ color: '#fff', marginBottom: 16, marginTop: 0 }}>
+              Partners &amp; Affiliated Initiatives
             </Title>
-            {partnerLinks.map((p) =>
-              p.internal ? (
-                <Link key={p.label} to={p.href} style={linkStyle}>
-                  <Space>
-                    {p.icon}
-                    {p.label}
-                  </Space>
-                </Link>
-              ) : (
-                <a
-                  key={p.label}
-                  href={p.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  style={linkStyle}
-                >
-                  <Space>
-                    {p.icon}
-                    {p.label}
-                  </Space>
-                </a>
-              )
-            )}
+            <div style={{ display: 'flex', flexDirection: 'column' }}>
+              {partnerLinks.map((p) =>
+                p.internal ? (
+                  <Link key={p.label} to={p.href} style={linkStyle}>
+                    <Space size={8}>
+                      {p.icon}
+                      <span>{p.label}</span>
+                    </Space>
+                  </Link>
+                ) : (
+                  <a
+                    key={p.label}
+                    href={p.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    style={linkStyle}
+                  >
+                    <Space size={8}>
+                      {p.icon}
+                      <span>{p.label}</span>
+                    </Space>
+                  </a>
+                )
+              )}
+            </div>
           </Col>
         </Row>
 
