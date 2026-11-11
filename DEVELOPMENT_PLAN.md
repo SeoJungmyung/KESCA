@@ -187,6 +187,15 @@ backend/src/
   levels, a few standards, courses, events, and gallery items — so every page works
   before real data exists.
 
+> **Timezone (important, hit on 2026-11-11):** the MariaDB server may report its
+> system timezone as a name like `Etc/GMT0`. The `mariadb` Node.js connector's
+> `timezone: 'auto'` mode cannot convert that name to a `±HH:00` offset, and the
+> connection fails with `Automatic timezone setting fails. wrong Server timezone
+> 'Etc/GMT0' conversion to +/-HH:00 conversion.` Always set an explicit offset in
+> the Sequelize config — `timezone: '+00:00'` — and never use `'auto'`. (Also
+> remove any `dialectOptions.timezone` — it overrides the top-level value.)
+> Dates are stored in UTC; convert to local time only when displaying.
+
 ### Tables
 
 | Table | Key columns |
