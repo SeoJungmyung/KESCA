@@ -10,6 +10,7 @@
 - **Client:** KESCA — Kitchen Exhaust Systems Cleaners Association (volunteer project for Air Advocates; contact: Rob Sweet, info@airadvocates.net).
 - **Goal:** A new public website for KESCA. Benchmark: IKECA (https://www.ikeca.org/) — keep a similar, trusted structure, but with a more modern design that is easier to use.
 - **Approved:** November 10, 2026 meeting — Rob approved the structure and design ("pretty nice"). The homepage is built with the structure decided in that meeting (Section 10).
+- **Next meeting:** Friday, November 13, 2026, morning (exact time to be confirmed by Rob by text). The "what's missing" list in Section 10 will be reviewed together then. The confirmation email about the November 10 decisions was prepared but **not sent** (November 11 decision) — the content is in the Notion meeting page instead.
 - **Proposal:** November 5, 2026 — JavaScript, React.js frontend, Node.js backend.
 - **Monorepo:** one repository, two top-level projects: `frontend/` and `backend/`.
 
@@ -281,6 +282,7 @@ These override the older proposal text and the sample mockup wherever they diffe
 15. **Fonts:** Rob did not like the fonts chosen in the mockup — propose font options and let Rob choose, do not keep the mockup fonts as final.
 16. **Video:** homepage opens with a short, high-quality, easy-to-understand video titled **"A video about The Dangers of Not Air Ventilating the Kitchen"** — it shows what KESCA does and sparks customers' interest. It is **not** a hero/ad video and **not** a documentary about hazardous substances. **The video itself is to be made and sent by Rob** — until it arrives, show the storyboard/placeholder, never a fake video.
 17. **Partners:** clear links to Friendly Green Giant, Air Advocates, and Slumlord Patrol.
+18. **Links to other official websites:** follow the *idea* of the old Strongpoint layout Rob sent on November 10, 2026 (http://airmedics.ipage.com/public_html/public_html/air-medics.ca/newadventures/strong.htm) — a sidebar with icon links to the other official sites (KESCA Certified, Air Advocates Certified, Strongpoint Adventures, Air-Medics TV, Air-Medics Kids!) plus links to the official Strongpoint site (strongpointadventures.com) and Air-Medics site (air-medics.ca). **Linking idea only — do not copy the old design** (very old fixed-width blue/white layout, footer copyright 1988–2011).
 
 ## 11. Features checklist
 
@@ -292,7 +294,7 @@ These override the older proposal text and the sample mockup wherever they diffe
 - [ ] Events & news (upcoming first)
 - [ ] Inquiry form saved to DB + admin inquiry board
 - [ ] Admin login (JWT) and content editing (pages, businesses, courses, events, gallery)
-- [ ] Partner links; Contact page; responsive mobile-first layout; large readable text
+- [ ] Partner links (Friendly Green Giant, Air Advocates, Slumlord Patrol) + links to other official sites (Strongpoint Adventures, Air-Medics) in the old Strongpoint sidebar style — links only, not the old design; Contact page; responsive mobile-first layout; large readable text
 - [ ] SEO basics: page titles, meta descriptions, semantic HTML
 
 ## 12. Coding conventions
@@ -372,5 +374,7 @@ CORS_ORIGIN=http://localhost:5173
   https://muse.ai/s/kesca-sample-page-xvu6cuaxfxm5xwxp/tyLMN36Sa9xtSMwm7zAS8H0xYC9F0pzTByfZWwgaSK8
 - IKECA benchmark: https://www.ikeca.org/
 - Proposal sent November 5, 2026 (React.js frontend, Node.js backend).
-- Meeting notes: November 3, November 8, November 10, 2026 (structure, top-bar, and direction decisions).
+- Meeting notes: November 3, November 8, November 10, 2026 (structure, top-bar, and direction decisions); November 13, 2026 (4th meeting — "what's missing" list review; time TBD, Rob to confirm by text).
+- Rob's Strongpoint layout example (November 10, 2026): http://airmedics.ipage.com/public_html/public_html/air-medics.ca/newadventures/strong.htm — linking idea only, not the design.
+- Notion meeting pages: "KESCA 3번째 미팅" (November 10 prep), "KESCA 4번째 미팅" (November 13 prep, includes the 12-item "what's missing" list) under "면접, 미팅 대비".
 - Contact: Rob Sweet, Air Advocates, info@airadvocates.net.
