@@ -108,13 +108,12 @@ export default function HomePage() {
               level={1}
               style={{ color: '#fff', maxWidth: 760, margin: '0 auto 16px', fontSize: 'clamp(28px, 5vw, 52px)' }}
             >
-              The Dangers of Not Ventilating Your Kitchen
+              A video about The Dangers of Not Air Ventilating the Kitchen
             </Title>
             <Paragraph
               style={{ color: 'rgba(255,255,255,0.85)', fontSize: 18, maxWidth: 600, margin: '0 auto 32px' }}
             >
-              A short documentary about fire hazards, health risks, and the economic cost of neglecting
-              kitchen exhaust cleaning — and how KESCA certified professionals solve it.
+              A short, high-quality, easy-to-understand video that shows what KESCA does and sparks customers' interest.
             </Paragraph>
             <Space size={16} wrap style={{ justifyContent: 'center' }}>
               <Link to="/certification">
