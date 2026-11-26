@@ -27,7 +27,6 @@ const fallbackCertifications = [
     badgeColor: '#1B4F72',
     requirements: [
       'Completion of Kitchen Exhaust Cleaning Fundamentals Course',
-      'Minimum 100 logged hours of on-site cleaning under supervision',
       'Pass written technical examination (80% minimum)',
       'Submission of 5 approved Before/After photo audit portfolios',
     ],

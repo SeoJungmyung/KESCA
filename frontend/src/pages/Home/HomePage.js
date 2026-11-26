@@ -63,6 +63,8 @@ const differentiators = [
   'Covers kitchen exhaust, refrigeration, grease traps, dryer & bathroom exhaust, and supply air systems',
   'Consumer demand: uncertified restaurants get left behind',
   'Government recognition follows industry-led standards',
+  'Whole-facility hygiene and safety certification — duct deep cleaning, walk-in cooler mould removal, ceiling, wall, carpet and furniture cleaning, make-up air and HVAC management, and NFPA 96 compliance checks.',
+  'For restaurants, hotels, universities, hospitals, nursing homes, prisons, food processing plants, and First Nations reserves.',
 ];
 
 export default function HomePage() {
@@ -108,12 +110,12 @@ export default function HomePage() {
               level={1}
               style={{ color: '#fff', maxWidth: 760, margin: '0 auto 16px', fontSize: 'clamp(28px, 5vw, 52px)' }}
             >
-              A video about The Dangers of Not Air Ventilating the Kitchen
+              A Video About What KESCA Does
             </Title>
             <Paragraph
               style={{ color: 'rgba(255,255,255,0.85)', fontSize: 18, maxWidth: 600, margin: '0 auto 32px' }}
             >
-              A short, high-quality, easy-to-understand video that shows what KESCA does and sparks customers' interest.
+              A short video introducing KESCA and the preventative maintenance standard is coming soon.
             </Paragraph>
             <Space size={16} wrap style={{ justifyContent: 'center' }}>
               <Link to="/certification">
@@ -122,7 +124,7 @@ export default function HomePage() {
                   size="large"
                   style={{ background: '#E67E22', borderColor: '#E67E22', fontSize: 16, padding: '0 32px', height: 48 }}
                 >
-                  Get Certified
+                  Become a Licenced Contractor
                 </Button>
               </Link>
               <Link to="/find-a-pro">
@@ -135,33 +137,9 @@ export default function HomePage() {
               </Link>
             </Space>
 
-            {/* Storyboard breakdown */}
-            <div className="storyboard">
-              <Text style={{ color: 'rgba(255,255,255,0.6)', fontSize: 13, display: 'block', marginBottom: 12 }}>
-                VIDEO STORYBOARD (~90 seconds)
-              </Text>
-              <div className="storyboard-scenes">
-                {[
-                  { time: '0–15s', desc: 'Busy restaurant kitchen — steam, smoke, grease buildup in ducts' },
-                  { time: '15–30s', desc: 'Close-up of grease buildup — fire hazard highlighted' },
-                  { time: '30–50s', desc: 'KESCA certified technician doing Before/After cleaning' },
-                  { time: '50–75s', desc: 'Health inspector and restaurant owner reviewing KESCA certificate' },
-                  { time: '75–90s', desc: 'Clean, safe kitchen — KESCA logo + "Get Certified Today" CTA' },
-                ].map((scene, i) => (
-                  <div key={i} className="storyboard-scene">
-                    <Tag color="rgba(255,255,255,0.15)" style={{ color: '#E67E22', border: 'none', marginBottom: 4 }}>
-                      {scene.time}
-                    </Tag>
-                    <Text style={{ color: 'rgba(255,255,255,0.75)', fontSize: 13 }}>
-                      {scene.desc}
-                    </Text>
-                  </div>
-                ))}
-              </div>
-              <Text style={{ color: 'rgba(255,255,255,0.4)', fontSize: 12, marginTop: 12, display: 'block' }}>
-                * Final video to be provided by Rob Sweet
-              </Text>
-            </div>
+            <Text style={{ color: 'rgba(255,255,255,0.4)', fontSize: 12, marginTop: 24, display: 'block' }}>
+              * Final video to be provided by Rob Sweet
+            </Text>
           </div>
         </div>
       </section>

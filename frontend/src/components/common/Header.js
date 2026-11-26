@@ -93,30 +93,17 @@ export default function Header() {
               borderRadius: 6,
             }}
           />
-          <div style={{ display: 'flex', flexDirection: 'column' }}>
-            <span
-              style={{
-                fontSize: 22,
-                fontWeight: 900,
-                color: '#1B4F72',
-                letterSpacing: 1.5,
-                lineHeight: 1.1,
-              }}
-            >
-              KESCA
-            </span>
-            <span
-              style={{
-                fontSize: 10,
-                fontWeight: 600,
-                color: '#718096',
-                letterSpacing: 0.5,
-                textTransform: 'uppercase',
-              }}
-            >
-              Cleaners Association
-            </span>
-          </div>
+          <span
+            style={{
+              fontSize: 22,
+              fontWeight: 900,
+              color: '#1B4F72',
+              letterSpacing: 1.5,
+              lineHeight: 1.1,
+            }}
+          >
+            KESCA
+          </span>
         </Link>
 
         {/* Desktop Navigation Menu (disabledOverflow guarantees menu never collapses into ...) */}

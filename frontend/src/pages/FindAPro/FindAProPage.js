@@ -231,8 +231,11 @@ export default function FindAProPage() {
                 <Title level={3} style={{ margin: 0, color: '#1B4F72' }}>
                   Interactive Coverage Map
                 </Title>
-                <Text type="secondary" style={{ fontSize: 14 }}>
+                <Text type="secondary" style={{ fontSize: 14, display: 'block' }}>
                   Switch between certified contractor locations and all registered contractors.
+                </Text>
+                <Text type="secondary" style={{ fontSize: 14, display: 'block', marginTop: 4 }}>
+                  A contractor becomes licenced by completing a KESCA course. The work they perform is certified — that is why there are two maps: one for certified locations, one for licensed contractors.
                 </Text>
               </div>
               <Radio.Group

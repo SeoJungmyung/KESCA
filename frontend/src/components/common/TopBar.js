@@ -32,7 +32,7 @@ export default function TopBar() {
           </Link>
           <Link to="/certification">
             <Button size="small" style={{ background: '#E67E22', borderColor: '#E67E22', color: '#fff' }}>
-              Get certified
+              Become a licenced contractor
             </Button>
           </Link>
         </Col>
