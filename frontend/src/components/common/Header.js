@@ -2,7 +2,7 @@ import React, { useState, useMemo } from 'react';
 import { Menu, Button, Drawer, Typography, Space } from 'antd';
 import { MenuOutlined } from '@ant-design/icons';
 import { Link, useLocation } from 'react-router-dom';
-import kescaLogo from '../../styles/images/02 kesca 2020.jpg';
+import kescaLogo from '../../styles/images/logo_kesca.png';
 
 const { Title, Text } = Typography;
 

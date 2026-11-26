@@ -5,7 +5,7 @@ import {
   GlobalOutlined,
   SafetyCertificateOutlined,
 } from '@ant-design/icons';
-import kescaLogo from '../../styles/images/02 kesca 2020.jpg';
+import kescaLogo from '../../styles/images/logo_kesca.png';
 
 const { Title, Text, Paragraph } = Typography;
 
